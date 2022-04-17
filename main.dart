@@ -63,6 +63,13 @@ class _AbcState extends State<Abc> {
                     print(isChecked);
                     print(val);
                   })).toList(),
+                  
+                  
+                  const Text("SINGLE CHECKBOX ",style: TextStyle(fontWeight: FontWeight.bold,fontSize: 24),),
+                CheckboxListTile(title: const Text('REGULAR DRINK'),value: context.watch<CheckProvider>().select, onChanged: (val){
+                  checkProvider.toggle(val!);
+                  print(val);
+                }),
 
             ],
           )),
