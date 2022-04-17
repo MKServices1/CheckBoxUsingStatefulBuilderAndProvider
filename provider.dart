@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
 class CheckProvider extends ChangeNotifier{
-  bool _selected=false;
-  bool get selecte =>_selected;
+   bool _selected=false;
+  bool get select =>_selected;
 
-
+  void toggle(bool selected){
+    _selected=selected;
+    notifyListeners();
+  }
 
   final List<CheckBoxTitle> _filter=[
     CheckBoxTitle(title: "Apple", check: false),
